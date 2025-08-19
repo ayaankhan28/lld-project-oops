@@ -1,7 +1,4 @@
-// Book.java
-/**
- * Represents a book with its attributes from Amazon's bestselling books dataset
- */
+
 public class Book {
     private String title;
     private String author;
@@ -11,9 +8,6 @@ public class Book {
     private int year;
     private String genre;
     
-    /**
-     * Constructor to initialize a Book object
-     */
     public Book(String title, String author, double userRating, int reviews, 
                 double price, int year, String genre) {
         this.title = title;
@@ -25,7 +19,6 @@ public class Book {
         this.genre = genre;
     }
     
-    // Getters
     public String getTitle() {
         return title;
     }
@@ -54,7 +47,6 @@ public class Book {
         return genre;
     }
     
-    // Setters
     public void setTitle(String title) {
         this.title = title;
     }
@@ -83,9 +75,6 @@ public class Book {
         this.genre = genre;
     }
     
-    /**
-     * Prints the details of the book in a formatted manner
-     */
     public void printDetails() {
         System.out.println("Title: " + title);
         System.out.println("Author: " + author);

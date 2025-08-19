@@ -5,16 +5,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Reads the CSV dataset and creates Book objects
- */
+
 public class DatasetReader {
     
-    /**
-     * Reads the CSV file and returns a list of Book objects
-     * @param filename The path to the CSV file
-     * @return List of Book objects
-     */
+ 
     public static List<Book> readDataset(String filename) {
         List<Book> books = new ArrayList<>();
         
@@ -23,7 +17,7 @@ public class DatasetReader {
             boolean isFirstLine = true;
             
             while ((line = br.readLine()) != null) {
-                // Skip header line
+               
                 if (isFirstLine) {
                     isFirstLine = false;
                     continue;
@@ -46,14 +40,10 @@ public class DatasetReader {
         return books;
     }
     
-    /**
-     * Parses a CSV line and creates a Book object
-     * @param line CSV line to parse
-     * @return Book object or null if parsing fails
-     */
+
     private static Book parseBookFromLine(String line) {
         try {
-            // Handle CSV parsing with potential commas in quoted fields
+
             String[] fields = parseCSVLine(line);
             
             if (fields.length < 7) {
@@ -77,11 +67,7 @@ public class DatasetReader {
         }
     }
     
-    /**
-     * Parses a CSV line handling quoted fields that may contain commas
-     * @param line The CSV line to parse
-     * @return Array of field values
-     */
+
     private static String[] parseCSVLine(String line) {
         List<String> fields = new ArrayList<>();
         boolean inQuotes = false;

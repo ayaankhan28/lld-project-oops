@@ -3,15 +3,12 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 
-/**
- * Main driver class for the Amazon Books Dataset application
- */
 public class Driver {
     private static List<Book> books;
     private static Scanner scanner = new Scanner(System.in);
     
     public static void main(String[] args) {
-        // Read the dataset
+
         System.out.println("Loading Amazon Bestselling Books Dataset...");
         books = DatasetReader.readDataset("data/data.csv");
         
@@ -22,7 +19,7 @@ public class Driver {
         
         System.out.println("Successfully loaded " + books.size() + " books from the dataset.\n");
         
-        // Display menu and handle user choices
+      
         boolean running = true;
         while (running) {
             displayMenu();
