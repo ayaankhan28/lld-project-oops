@@ -28,8 +28,8 @@ SST Assignments/
 
 1. **Clone or download the project**
    ```bash
-   git clone <repository-url>
-   cd "SST Assignments"
+   git clone https://github.com/ayaankhan28/lld-project-oops
+   cd "lld-project-oops"
    ```
 
 2. **Compile the Java files**
